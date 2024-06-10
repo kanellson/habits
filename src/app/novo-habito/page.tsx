@@ -1,12 +1,13 @@
 import Link from "next/link";
+import Navigate from "./Navigate";
 
 export default function NewHabit() {
   async function newHabit(formData: FormData) {
       "use server"
       const habit = formData.get("habit");
-      console.log(habit);
-      
+      console.log(habit);      
   }
+
    return (
     <div>
       <section className="flex justify-center flex-col">
@@ -38,9 +39,7 @@ export default function NewHabit() {
             >
               Cadastrar
             </button>
-            <button className="bg-slate-900 flex-1 py-2 rounded-md text-red-500 uppercase">
-              Cancelar
-            </button>
+            <Navigate/>
           </div>
         </form>
       </section>
